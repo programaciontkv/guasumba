@@ -1,0 +1,135 @@
+%PDF-1.3
+1 0 obj
+<< /Type /Catalog
+/Outlines 2 0 R
+/Pages 3 0 R >>
+endobj
+2 0 obj
+<< /Type /Outlines /Count 0 >>
+endobj
+3 0 obj
+<< /Type /Pages
+/Kids [6 0 R
+]
+/Count 1
+/Resources <<
+/ProcSet 4 0 R
+/Font << 
+/F1 8 0 R
+/F2 9 0 R
+>>
+>>
+/MediaBox [0.000 0.000 841.890 595.280]
+ >>
+endobj
+4 0 obj
+[/PDF /Text ]
+endobj
+5 0 obj
+<<
+/Creator (DOMPDF)
+/CreationDate (D:20220914151934-05'00')
+/ModDate (D:20220914151934-05'00')
+>>
+endobj
+6 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 7 0 R
+>>
+endobj
+7 0 obj
+<<
+/Length 2605 >>
+stream
+
+0.000 0.000 0.000 rg
+BT 176.145 549.994 Td /F1 9.8 Tf  [(Codigo)] TJ ET
+BT 434.157 549.994 Td /F1 9.8 Tf  [(Descripcion)] TJ ET
+BT 632.279 549.994 Td /F1 9.8 Tf  [(Unidad)] TJ ET
+BT 736.246 549.994 Td /F1 9.8 Tf  [(Cantidad)] TJ ET
+BT 57.052 535.411 Td /F2 9.8 Tf  [(00001)] TJ ET
+BT 328.033 535.411 Td /F2 9.8 Tf  [(PRUEBAS2)] TJ ET
+BT 592.568 535.411 Td /F2 9.8 Tf  [(UNIDAD)] TJ ET
+BT 705.878 535.411 Td /F2 9.8 Tf  [(4.00)] TJ ET
+BT 57.052 520.828 Td /F2 9.8 Tf  [(PRUEBAS)] TJ ET
+BT 328.033 520.828 Td /F2 9.8 Tf  [(PRUEBAS)] TJ ET
+BT 592.568 520.828 Td /F2 9.8 Tf  [(UNIDAD)] TJ ET
+BT 705.878 520.828 Td /F2 9.8 Tf  [(27.00)] TJ ET
+BT 36.266 506.245 Td /F2 9.8 Tf  [(+)] TJ ET
+BT 57.052 506.245 Td /F2 9.8 Tf  [(CARTUCHO DE CINTA)] TJ ET
+BT 592.568 506.245 Td /F2 9.8 Tf  [(TOTAL)] TJ ET
+BT 705.878 506.245 Td /F2 9.8 Tf  [(31.00)] TJ ET
+BT 57.052 491.662 Td /F2 9.8 Tf  [(0003)] TJ ET
+BT 328.033 491.662 Td /F2 9.8 Tf  [(IMPRESORA INYECCION)] TJ ET
+BT 592.568 491.662 Td /F2 9.8 Tf  [(UNIDAD)] TJ ET
+BT 705.878 491.662 Td /F2 9.8 Tf  [(100.00)] TJ ET
+BT 36.266 477.079 Td /F2 9.8 Tf  [(+)] TJ ET
+BT 57.052 477.079 Td /F2 9.8 Tf  [(IMPRESORA INYECCION A TIN)] TJ ET
+BT 592.568 477.079 Td /F2 9.8 Tf  [(TOTAL)] TJ ET
+BT 705.878 477.079 Td /F2 9.8 Tf  [(100.00)] TJ ET
+BT 57.052 462.496 Td /F2 9.8 Tf  [(0004)] TJ ET
+BT 328.033 462.496 Td /F2 9.8 Tf  [(IMPRESORA LASER BROTHER)] TJ ET
+BT 592.568 462.496 Td /F2 9.8 Tf  [(UNIDAD)] TJ ET
+BT 705.878 462.496 Td /F2 9.8 Tf  [(200.00)] TJ ET
+BT 36.266 447.913 Td /F2 9.8 Tf  [(+)] TJ ET
+BT 57.052 447.913 Td /F2 9.8 Tf  [(IMPRESORAS LASER)] TJ ET
+BT 592.568 447.913 Td /F2 9.8 Tf  [(TOTAL)] TJ ET
+BT 705.878 447.913 Td /F2 9.8 Tf  [(200.00)] TJ ET
+BT 36.266 433.330 Td /F2 9.8 Tf  [(-)] TJ ET
+BT 57.052 433.330 Td /F2 9.8 Tf  [(BROTHER)] TJ ET
+BT 592.568 433.330 Td /F2 9.8 Tf  [(TOTAL)] TJ ET
+BT 705.878 433.330 Td /F2 9.8 Tf  [(331.00)] TJ ET
+BT 57.052 418.747 Td /F2 9.8 Tf  [(002)] TJ ET
+BT 328.033 418.747 Td /F2 9.8 Tf  [(CARTUCHOS)] TJ ET
+BT 592.568 418.747 Td /F2 9.8 Tf  [(KG)] TJ ET
+BT 705.878 418.747 Td /F2 9.8 Tf  [(1002.00)] TJ ET
+BT 36.266 404.164 Td /F2 9.8 Tf  [(+)] TJ ET
+BT 57.052 404.164 Td /F2 9.8 Tf  [(CARTUCHOS ORIGINALES)] TJ ET
+BT 592.568 404.164 Td /F2 9.8 Tf  [(TOTAL)] TJ ET
+BT 705.878 404.164 Td /F2 9.8 Tf  [(1002.00)] TJ ET
+BT 36.266 389.581 Td /F2 9.8 Tf  [(-)] TJ ET
+BT 57.052 389.581 Td /F2 9.8 Tf  [(CANON)] TJ ET
+BT 592.568 389.581 Td /F2 9.8 Tf  [(TOTAL)] TJ ET
+BT 705.878 389.581 Td /F2 9.8 Tf  [(1002.00)] TJ ET
+BT 592.568 374.998 Td /F2 9.8 Tf  [(TOTALES)] TJ ET
+BT 705.878 374.998 Td /F2 9.8 Tf  [(1333.00)] TJ ET
+endstream
+endobj
+8 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F1
+/BaseFont /Times-Bold
+/Encoding /WinAnsiEncoding
+>>
+endobj
+9 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F2
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+>>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000074 00000 n 
+0000000120 00000 n 
+0000000284 00000 n 
+0000000313 00000 n 
+0000000427 00000 n 
+0000000490 00000 n 
+0000003147 00000 n 
+0000003255 00000 n 
+trailer
+<<
+/Size 10
+/Root 1 0 R
+/Info 5 0 R
+>>
+startxref
+3364
+%%EOF
