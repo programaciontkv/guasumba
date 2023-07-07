@@ -371,6 +371,22 @@ class Factura_model extends CI_Model {
 		$resultado=$this->db->get();
 		return $resultado->row();
     }
+
+	function lista_impuesto_detalle_factura($id){
+
+		$this->db->select('dfc_iva  as iva');
+		$this->db->from('erp_det_factura d');
+		$this->db->where('fac_id',$id);
+		$this->db->where("dfc_iva != '0'",null);
+		$this->db->where("dfc_iva != 'EX'",null);
+		$this->db->where("dfc_iva != 'NO'",null);
+		$this->db->limit(1);
+		$resultado=$this->db->get();
+		return $resultado->row();
+
+
+		//SELECT dfc_iva  as iva FROM  erp_det_factura where fac_id='$id' and dfc_iva != '0' and dfc_iva != 'EX' and dfc_iva != 'NO' limit 1  
+	}
     
 }
 

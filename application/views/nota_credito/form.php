@@ -321,7 +321,7 @@
 
                                     <td id="valores" valign="top" rowspan="11" colspan="<?php echo $col_obs?>">
                                     </td>    
-                                    <td colspan="2" align="right">Subtotal 12%:</td>
+                                    <td colspan="2" id="lb1" align="right"></td>
                                     <td>
                                         <input style="text-align:right" type="text" class="form-control" id="subtotal12" name="subtotal12" value="<?php echo str_replace(',', '', number_format($nota->ncr_subtotal12, $dec)) ?>" readonly/>
                                         
@@ -513,6 +513,7 @@
       var dec='<?php echo $dec;?>';
       var dcc='<?php echo $dcc;?>';
       var valida_asiento='<?php echo $valida_asiento;?>';
+      var iva_temp=0;
       window.onload = function () {
         cam_motivo();
         if(valida_asiento==1){
@@ -848,6 +849,8 @@
                                 $('#total_valor').val(parseFloat(dt.fac_total_valor).toFixed(dec));
                                 $('#subtotal').val(parseFloat(dt.fac_subtotal).toFixed(dec));
                                 $('#lista').html(dt.detalle);
+                                $('#lb1').html("SUBTOTAL "+dt.iva+ "%" );
+                                iva_temp =dt.iva;
                                 $('#count_detalle').val(dt.cnt_detalle);
                                 $('#saldo').val(dt.saldo);
                                 $('#lista_encabezado').html('');
@@ -887,7 +890,7 @@
                             return false;
                       }
                     },
-                    url: base_url+"nota_credito/load_producto/"+vl+"/"+inven+"/"+ctr_inv+"/"+emi_id.value,
+                    url: base_url+"nota_credito/load_producto/"+vl+"/"+inven+"/"+ctr_inv+"/"+emi_id.value+"/"+fac_id.value,
                     type: 'JSON',
                     dataType: 'JSON',
                     success: function (dt) {
@@ -1252,15 +1255,21 @@
                     tdsc = (round(tdsc,dec) * 1) + (round(d,dec) * 1);
                     tice = (round(tice,dec) * 1) + (round(pic,dec) * 1);
 
-                    if (ob == '14') {
-                        t12 = (round(t12,dec) * 1 + round(vt,dec) * 1);
-                        tiva = ((round(tice,dec) + round(t12,dec)) * 14 / 100);
-                    }
+                    // if (ob == '14') {
+                    //     t12 = (round(t12,dec) * 1 + round(vt,dec) * 1);
+                    //     tiva = ((round(tice,dec) + round(t12,dec)) * 14 / 100);
+                    // }
 
-                    if (ob == '12') {
-                        t12 = (round(t12,dec) * 1 + round(vt,dec) * 1);
-                        tiva = ((round(tice,dec) + round(t12,dec)) * 12 / 100);
-                    }
+                    // if (ob == '12') {
+                    //     t12 = (round(t12,dec) * 1 + round(vt,dec) * 1);
+                    //     tiva = ((round(tice,dec) + round(t12,dec)) * 12 / 100);
+                    // }
+
+                    if (ob != '0' && ob != 'EX' && ob != 'NO') {
+                     t12 = (round(t12, dec) * 1 + round(vt, dec) * 1);
+                    tiva = ((round(tice, dec) + round(t12, dec)) * iva_temp / 100);
+                   }
+
                     if (ob == '0') {
                         t0 = (round(t0,dec) * 1 + round(vt,dec) * 1);
                     }
@@ -1373,15 +1382,20 @@
                     tdsc = (round(tdsc,dec) * 1) + (round(d,dec) * 1);
                     tice = (round(tice,dec) * 1) + (round(pic,dec) * 1);
 
-                    if (ob == '14') {
-                        t12 = (round(t12,dec) * 1 + round(vt,dec) * 1);
-                        tiva = ((round(tice,dec) + round(t12,dec)) * 14 / 100);
-                    }
+                    // if (ob == '14') {
+                    //     t12 = (round(t12,dec) * 1 + round(vt,dec) * 1);
+                    //     tiva = ((round(tice,dec) + round(t12,dec)) * 14 / 100);
+                    // }
 
-                    if (ob == '12') {
-                        t12 = (round(t12,dec) * 1 + round(dsc,dec) * 1);
-                        tiva = ((round(tice,dec) + round(t12,dec)) * 12 / 100);
-                    }
+                    // if (ob == '12') {
+                    //     t12 = (round(t12,dec) * 1 + round(dsc,dec) * 1);
+                    //     tiva = ((round(tice,dec) + round(t12,dec)) * 12 / 100);
+                    // }
+                    if (ob != '0' && ob != 'EX' && ob != 'NO') {
+                     t12 = (round(t12, dec) * 1 + round(vt, dec) * 1);
+                    tiva = ((round(tice, dec) + round(t12, dec)) * iva_temp / 100);
+                   }
+
                     if (ob == '0') {
                         t0 = (round(t0,dec) * 1 + round(vt,dec) * 1);
                     }

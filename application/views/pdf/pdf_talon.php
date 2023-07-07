@@ -95,6 +95,13 @@
                        </label>
                 </td>
                 </tr>  
+                <tr>
+                    <td colspan="2"><strong><?php echo utf8_encode ('Fecha emisión:') ?> </strong> 
+                        <label style="font-weight: normal;">
+                        <?php echo trim($factura->fac_fecha_emision)?>
+                       </label>
+                </td>
+                </tr>
                   
             </table> 
 
@@ -170,11 +177,11 @@
                         <td id="inv" colspan="2" rowspan="3" valign="top" >
                             
                         </td>
-                        <td colspan="2"><strong>Subtotal 12%</strong></td>
+                        <td colspan="2"><strong>Subtotal <?php echo $t_iva ?>%</strong></td>
                         <td class="numerico"><?php echo number_format($factura->fac_subtotal12,$dec)?></td>
                     </tr>                
                     <tr>
-                        <td colspan="2"><strong>IVA 12%</strong></td>
+                        <td colspan="2"><strong>IVA <?php echo $t_iva ?>%</strong></td>
                         <td class="numerico"><?php echo number_format($factura->fac_total_iva,$dec)?></td>
                     </tr>
                     <tr>

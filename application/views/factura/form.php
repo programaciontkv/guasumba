@@ -521,7 +521,7 @@
                                     <td valign="top" rowspan="9" colspan="<?php echo $col_obs?>">
                                       <textarea style="height: 80px; width: 90%;" id="observacion" name="observacion"   onkeydown="return enter(event)" maxlength="250" ><?php echo $factura->fac_observaciones ?></textarea>
                                     </td>    
-                                    <td colspan="2" align="right">Subtotal 12%:</td>
+                                    <td colspan="2" align="right">Subtotal <?php echo $t_iva ?>%:</td>
                                     <td>
                                         <input style="text-align:right" type="text" class="form-control" id="subtotal12" name="subtotal12" value="<?php echo str_replace(',', '', number_format($factura->fac_subtotal12, $dec)) ?>" readonly/>
                                         
@@ -806,6 +806,7 @@
       var dec='<?php echo $dec;?>';
       var dcc='<?php echo $dcc;?>';
       var m_pag='<?php echo $m_pag;?>';
+      var t_iva = '<?php echo $t_iva ?>';
       var valida_asiento='<?php echo $valida_asiento;?>';
       var objeto ;
 
@@ -1538,9 +1539,16 @@ function verificar_entero(cedula) {
                         $('#pro_descripcion').val(dt.pro_codigo);
                         $('#pro_referencia').val(dt.pro_descripcion);
                         if(dt.pro_iva==''){
-                          $('#iva').val('12');
+                          //$('#iva').val('12');
+                          $('#iva').val(t_iva);
                         }else{
-                          $('#iva').val(dt.pro_iva);
+                          //7$('#iva').val(dt.pro_iva);
+
+                            if (dt.pro_iva == '12') {
+                              $('#iva').val(t_iva);
+                          } else {
+                              $('#iva').val(dt.pro_iva);
+                          }
                         }
                         $('#pro_aux').val(dt.pro_id);
                         $('#pro_ids').val(dt.ids);
@@ -1765,17 +1773,23 @@ function verificar_entero(cedula) {
                     tdsc = (round(tdsc,dec) * 1) + (round(d,dec) * 1);
                     tice = (round(tice,dec) * 1) + (round(pic,dec) * 1);
 
-                    if (ob == '14') {
-                        t12 = (round(t12,dec) * 1 + round(vt,dec) * 1);
-                        tiva = ((round(tice,dec) + round(t12,dec)) * 14 / 100);
-                    }
+                    // if (ob == '14') {
+                    //     t12 = (round(t12,dec) * 1 + round(vt,dec) * 1);
+                    //     tiva = ((round(tice,dec) + round(t12,dec)) * 14 / 100);
+                    // }
 
 
-                    if (ob == '12') {
-                        t12 = (round(t12,dec) * 1 + round(vt,dec) * 1);
-                        tiva = ((round(tice,dec) + round(t12,dec)) * 12 / 100);
-                    }
-                    console.log( round(tiva,dec));
+                    // if (ob == '12') {
+                    //     t12 = (round(t12,dec) * 1 + round(vt,dec) * 1);
+                    //     tiva = ((round(tice,dec) + round(t12,dec)) * 12 / 100);
+                    // }
+
+                    if (ob != '0' && ob != 'EX' && ob != 'NO') {
+            t12 = (round(t12, dec) * 1 + round(vt, dec) * 1);
+            tiva = ((round(tice, dec) + round(t12, dec)) * t_iva / 100);
+        }
+        
+                  
 
                     if (ob == '0') {
                         t0 = (round(t0,dec) * 1 + round(vt,dec) * 1);

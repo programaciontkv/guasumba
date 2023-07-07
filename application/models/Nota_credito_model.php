@@ -210,6 +210,24 @@ class Nota_credito_model extends CI_Model {
 		return $resultado->row();
 			
 	}
+
+	public function lista_detalle_iva($id)
+	{ 
+			$this->db->select('dnc_iva  as iva');
+			$this->db->from('erp_det_nota_credito d');
+			$this->db->where('ncr_id', $id);
+			$this->db->where("dnc_iva != '0'", null);
+			$this->db->where("dnc_iva != 'EX'", null);
+			$this->db->where("dnc_iva != 'NO'", null);
+			$this->db->limit(1);
+			$resultado = $this->db->get();
+			return $resultado->row();
+			//SELECT * FROM  erp_det_nota_credito where ncr_id=$id and dnc_iva!='EX' and dnc_iva!='NO' order by cast(dnc_iva as integer) desc limit 1
+		
+
+
+
+	}
     
 }
 
